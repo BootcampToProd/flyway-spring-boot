@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: strategy-spring-boot
+
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Important: Only validate, let Flyway handle schema
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    out-of-order: false
+    group: true
+
+# Actuator endpoints for monitoring Flyway
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,strategy,metrics
+  endpoint:
+    health:
+      show-details: always
+
+# (Optional) For detailed logging
+logging:
+  level:
+    org.flywaydb: INFO
+    org.springframework.jdbc: INFO

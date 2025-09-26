@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB_NAME:flyway_demo_stage}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    locations: classpath:db/migration/common,classpath:db/migration/stage
+    clean-disabled: true  # Prevent accidental clean in staging

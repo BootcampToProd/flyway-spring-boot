@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB_NAME:flyway_demo_prod}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    locations: classpath:db/migration/common,classpath:db/migration/prod
+    clean-disabled: true  # Never allow clean in production
+    validate-on-migrate: true
