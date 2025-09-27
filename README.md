@@ -3,7 +3,7 @@
 Master **seamless database migrations** with **Flyway** and **Spring Boot** native integration. This repository demonstrates how to build a complete multi-environment migration system that manages database schema changes across development, staging, and production environments using Spring Boot's built-in Flyway auto-configuration.
 
 📖 **Complete Guide**: For detailed explanations, Spring Boot configuration mastery, and production-ready migration strategies, read our comprehensive tutorial.<br>
-👉 [**Flyway Migration Using Spring Boot: Complete Tutorial Guide**](https://bootcamptoprod.com/flyway-migration-spring-boot-guide)
+👉 [**Flyway Migration Using Spring Boot: Complete Tutorial Guide**](https://bootcamptoprod.com/flyway-with-spring-boot/)
 
 ---
 
